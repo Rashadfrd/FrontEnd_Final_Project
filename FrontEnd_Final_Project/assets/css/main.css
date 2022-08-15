@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 400vh;
+}
+
+#header {
+  z-index: 999;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: none;
+  background-color: white;
+}
+#header .container {
+  padding: 1% 0 0.6% 0;
+}
+#header .container .row {
+  justify-content: flex-end;
+}
+#header .container .row__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header .container .row__nav__links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#header .container .row__nav__links ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+#header .container .row__nav__links ul li {
+  margin: 0 13px 0 13px;
+}
+#header .container .row__nav__links ul a {
+  text-decoration: none;
+  color: black;
+}
+#header .container .row__other-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+#header-2 {
+  color: white;
+}
+#header-2 .container {
+  padding: 1% 0 0.6% 0;
+}
+#header-2 .container .row {
+  justify-content: flex-end;
+}
+#header-2 .container .row__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header-2 .container .row__nav__links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#header-2 .container .row__nav__links ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+#header-2 .container .row__nav__links ul li {
+  margin: 0 13px 0 13px;
+}
+#header-2 .container .row__nav__links ul li:hover a {
+  color: black;
+}
+#header-2 .container .row__nav__links ul a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+#header-2 .container .row__other-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+#header-2 .container .row__other-features i {
+  transition: 0.4s;
+}
+#header-2 .container .row__other-features i:hover {
+  color: black;
+}
+
+#info-buy {
+  height: 85vh;
+  background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/slider/Slider-1-1920x925.png);
+  height: 98vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#info-buy .content-wrapper {
+  width: 95%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#info-buy .content-wrapper .content {
+  width: 40%;
+  color: white;
+}
+#info-buy .content-wrapper .content h2 {
+  font-size: 40px;
+}
+#info-buy .content-wrapper .content h1 {
+  font-size: 80px;
+}
+#info-buy .content-wrapper .content .btn {
+  width: 125px !important;
+  border-radius: 20px !important;
+  font-size: 14px !important;
+}/*# sourceMappingURL=main.css.map */
