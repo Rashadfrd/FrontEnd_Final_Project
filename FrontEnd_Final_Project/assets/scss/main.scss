@@ -18,6 +18,8 @@ body{
     top: 0;
     display: none;
     background-color: white;
+    animation-name: headerAnimation;
+    animation-duration: .7s;
     .container{
         padding: 1% 0 0.6% 0;
         .row{
@@ -55,7 +57,11 @@ body{
         }
     }
 }
+
 #header-2{
+    position: absolute;
+    width: 100%;
+    z-index: 2;
     color: white;
     .container{
         padding: 1% 0 0.6% 0;
@@ -106,32 +112,380 @@ body{
 }
 
 #info-buy{
-    height: 85vh;
-    background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/slider/Slider-1-1920x925.png);
-    height: 98vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    .content-wrapper{
-        width: 95%;
-        height: 80%;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    .wrapper{
+        width: 100%;
+        height: 99vh;
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        .content{
-            width: 40%;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 1rem;
+        .leftbtn{
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            left: 3%;
+            top: 46%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            h2{
-                font-size: 40px;
+            transition: .7s;
+            transform: scale(0);
+        }
+        .rightbtn{
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            right: 3%;
+            top: 46%;
+            display: flex;
+            align-items: center;
+            justify-content: center;            
+            color: white;
+            transition: .7s;
+            transform: scale(0);
+        }
+        .leftbtn:hover{
+            background-color: black;
+            transform: scale(0.9);
+        }
+        .rightbtn:hover{
+            background-color: black;
+            transform: scale(0.9);
+        }
+        [class*="content-wrapper"]{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            .content{
+                width: 40%;
+                color: white;
+                h2{
+                    font-size: 40px;
+                }
+                h1{
+                    font-size: 80px;
+                }
+                .btn{
+                    width: 125px !important;
+                    border-radius: 20px !important;
+                    font-size: 14px !important;
+                    transition: .5s !important;
+                }
+                .btn:hover{
+                    background-color: black !important;
+                }
             }
-            h1{
-                font-size: 80px;
-            }
-            .btn{
-                width: 125px !important;
-                border-radius: 20px !important;
-                font-size: 14px !important;
+        }
+        .first-content-wrapper{
+            background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/slider/Slider-1-1920x925.png);
+        }
+        .second-content-wrapper{
+            background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/slider/Slider-2-1920x925.png);
+            justify-content: flex-start;
+            padding-left: 6%;
+        }
+    }
+    .wrapper:hover .leftbtn{
+        transform: scale(1);
+    }
+    .wrapper:hover .rightbtn{
+        transform: scale(1);
+    }
+}
+
+#services{
+    padding: 4% 0 4% 0;
+    background-color: #fcfcfc;
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .delivery,.buying,.personal-session,.gift-voucher{
+            text-align: center;
+            cursor: pointer;
+        }
+        
+    }
+}
+
+.delivery-img{
+    animation-name: none;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+.buying-img{
+    animation-name: none;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+.personal-img{
+    animation-name: none;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+.gift-voucher-img{
+    animation-name: none;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+}
+
+
+#main-product{
+    padding: 5% 0 4% 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .info{
+            &__product-info{
+                &__subtitle{
+                    letter-spacing: 10px;
+                    h4{
+                        font-size: 18px;
+                        color: #eb4d4b;
+                    }
+                }
+                &__title{
+                    h2{
+                        font-size: 42px;
+                        font-weight: bold;
+                    }
+                }
+                &__desc{
+                    p{
+                        color: #8e8e8e;
+                    }
+                }
+                &__morebtn{
+                    button{
+                        border-radius: 30px;
+                        width: 130px;
+                        transition: .7s;
+                    }
+                    button:hover{
+                        border: 0;
+                        background-color: black;
+                    }
+                }
+                &__components{
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    .ul-1{
+                        color: #6d6a6a;
+                        position: relative;
+                        left: 6%;
+
+                        li::before{
+                            content: "\2022";
+                            color: red;
+                            font-weight: bold; 
+                            font-size: 27px;
+                            display: inline-block; 
+                            width: 1em; 
+                            margin-left: -1em;                          
+                        }
+                    }
+                    .ul-2{
+                        color: #6d6a6a;
+                        position: relative;
+                        left: 17%;
+                        li::before{
+                            content: "\2022";
+                            color: red;
+                            font-weight: bold; 
+                            font-size: 27px;
+                            display: inline-block; 
+                            width: 1em; 
+                            margin-left: -1em;                          
+                        }
+                    }
+                }
             }
         }
     }
+}
+
+#customer-review{
+    height: 670px;
+    background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/catalog/testimonialbackground.png);
+    .container{
+        padding: 5% 0;
+        text-align: center;
+        .subtitle{
+            letter-spacing: 10px;
+            h5{
+                font-size: 18px;
+                color: #eb4d4b;
+            }
+        }
+        .title{
+            h2{
+                font-size: 47px;
+            }
+        }
+        .break{
+            position: relative;
+            left: 47%;
+        }
+
+        .reviews{
+            ::-webkit-scrollbar {
+                display: none;
+            }
+            &__cards{
+                height: 47vh;
+                width: 80vw;
+                display: flex;
+                align-items: flex-end;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                gap: 20px;
+                &__first-card{
+                    padding: 0 3%;
+                    background-color: white;
+                    height: 35vh;
+                    width: 40vw;
+                    scroll-snap-align: start;
+                    flex: 0 0 50%;
+                    &__photo{
+                        width: 100px;
+                        height: 100px;
+                        background-color: #eb4d4b;
+                        border-radius: 50%;
+                        position: relative;
+                        bottom: 55px;
+                    }
+                    &__name-position{
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        .name{
+                            font-weight: 500;
+                            font-size: 25px;
+                        }
+                        .position{
+                            color: #eb4d4b;
+                        }
+                    }
+                }
+            }
+        }
+
+        .buttons{
+            display: flex;
+            width: 54.7%;
+            justify-content: end;
+
+            .previousBtn,.nextBtn{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #eb4d4b;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                transition: .7s;
+            }
+            .previousBtn:hover{
+                background-color: black;
+                transform: scale(0.9);
+            }
+            .nextBtn:hover{
+                background-color: black;
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+#fabulous-products{
+    padding: 4% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .subtitle{
+        letter-spacing: 10px;
+        h5{
+            font-size: 18px;
+            color: #eb4d4b;
+        }
+    }
+    .title{
+        h2{
+            font-size: 47px;
+        }
+    }
+    .parts{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__featured,&__best-sellers,&__new-arrivals{
+            transition: .7s;
+        }
+        &__featured:hover{
+            background-color: #f3f2f2;
+        }
+        &__best-sellers:hover{
+            background-color: #f3f2f2;
+        }
+        &__new-arrivals:hover{
+            background-color: #f3f2f2;
+        }
+    }
+    
+    .container{
+        padding: 3% 0;
+        .apple-cinema-card-inside{
+            background-color: red;
+            height: 470px;
+            &__img{}
+        }
+    }
+}
+
+
+
+@keyframes headerAnimation {
+    from{
+        height: 0;
+    }
+    to{
+        height: 74px;
+    }
+}
+@keyframes mouseEnter {
+    from{
+        transform: rotateY(0);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes mouseLeave {
+    from{
+        transform: rotateY(360deg);
+    }
+    to{
+        transform: rotateY(-1deg);
+    }    
 }

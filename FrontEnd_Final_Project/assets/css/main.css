@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,10 @@ body {
   top: 0;
   display: none;
   background-color: white;
+  -webkit-animation-name: headerAnimation;
+          animation-name: headerAnimation;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
 }
 #header .container {
   padding: 1% 0 0.6% 0;
@@ -54,6 +59,9 @@ body {
 }
 
 #header-2 {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
   color: white;
 }
 #header-2 .container {
@@ -103,33 +111,392 @@ body {
   color: black;
 }
 
-#info-buy {
-  height: 85vh;
-  background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/slider/Slider-1-1920x925.png);
-  height: 98vh;
+#info-buy ::-webkit-scrollbar {
+  display: none;
+}
+#info-buy .wrapper {
+  width: 100%;
+  height: 99vh;
+  display: flex;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding: 1rem;
+}
+#info-buy .wrapper .leftbtn {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  position: absolute;
+  left: 3%;
+  top: 46%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.7s;
+  transform: scale(0);
+}
+#info-buy .wrapper .rightbtn {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  position: absolute;
+  right: 3%;
+  top: 46%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: 0.7s;
+  transform: scale(0);
+}
+#info-buy .wrapper .leftbtn:hover {
+  background-color: black;
+  transform: scale(0.9);
+}
+#info-buy .wrapper .rightbtn:hover {
+  background-color: black;
+  transform: scale(0.9);
+}
+#info-buy .wrapper [class*=content-wrapper] {
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-}
-#info-buy .content-wrapper {
-  width: 95%;
-  height: 80%;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
 }
-#info-buy .content-wrapper .content {
+#info-buy .wrapper [class*=content-wrapper] .content {
   width: 40%;
   color: white;
 }
-#info-buy .content-wrapper .content h2 {
+#info-buy .wrapper [class*=content-wrapper] .content h2 {
   font-size: 40px;
 }
-#info-buy .content-wrapper .content h1 {
+#info-buy .wrapper [class*=content-wrapper] .content h1 {
   font-size: 80px;
 }
-#info-buy .content-wrapper .content .btn {
+#info-buy .wrapper [class*=content-wrapper] .content .btn {
   width: 125px !important;
   border-radius: 20px !important;
   font-size: 14px !important;
+  transition: 0.5s !important;
+}
+#info-buy .wrapper [class*=content-wrapper] .content .btn:hover {
+  background-color: black !important;
+}
+#info-buy .wrapper .first-content-wrapper {
+  background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/slider/Slider-1-1920x925.png);
+}
+#info-buy .wrapper .second-content-wrapper {
+  background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/slider/Slider-2-1920x925.png);
+  justify-content: flex-start;
+  padding-left: 6%;
+}
+#info-buy .wrapper:hover .leftbtn {
+  transform: scale(1);
+}
+#info-buy .wrapper:hover .rightbtn {
+  transform: scale(1);
+}
+
+#services {
+  padding: 4% 0 4% 0;
+  background-color: #fcfcfc;
+}
+#services .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#services .container .delivery, #services .container .buying, #services .container .personal-session, #services .container .gift-voucher {
+  text-align: center;
+  cursor: pointer;
+}
+
+.delivery-img {
+  -webkit-animation-name: none;
+          animation-name: none;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.buying-img {
+  -webkit-animation-name: none;
+          animation-name: none;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.personal-img {
+  -webkit-animation-name: none;
+          animation-name: none;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.gift-voucher-img {
+  -webkit-animation-name: none;
+          animation-name: none;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+#main-product {
+  padding: 5% 0 4% 0;
+}
+#main-product .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-product .container .info__product-info__subtitle {
+  letter-spacing: 10px;
+}
+#main-product .container .info__product-info__subtitle h4 {
+  font-size: 18px;
+  color: #eb4d4b;
+}
+#main-product .container .info__product-info__title h2 {
+  font-size: 42px;
+  font-weight: bold;
+}
+#main-product .container .info__product-info__desc p {
+  color: #8e8e8e;
+}
+#main-product .container .info__product-info__morebtn button {
+  border-radius: 30px;
+  width: 130px;
+  transition: 0.7s;
+}
+#main-product .container .info__product-info__morebtn button:hover {
+  border: 0;
+  background-color: black;
+}
+#main-product .container .info__product-info__components {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+#main-product .container .info__product-info__components .ul-1 {
+  color: #6d6a6a;
+  position: relative;
+  left: 6%;
+}
+#main-product .container .info__product-info__components .ul-1 li::before {
+  content: "•";
+  color: red;
+  font-weight: bold;
+  font-size: 27px;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+#main-product .container .info__product-info__components .ul-2 {
+  color: #6d6a6a;
+  position: relative;
+  left: 17%;
+}
+#main-product .container .info__product-info__components .ul-2 li::before {
+  content: "•";
+  color: red;
+  font-weight: bold;
+  font-size: 27px;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+#customer-review {
+  height: 670px;
+  background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/catalog/testimonialbackground.png);
+}
+#customer-review .container {
+  padding: 5% 0;
+  text-align: center;
+}
+#customer-review .container .subtitle {
+  letter-spacing: 10px;
+}
+#customer-review .container .subtitle h5 {
+  font-size: 18px;
+  color: #eb4d4b;
+}
+#customer-review .container .title h2 {
+  font-size: 47px;
+}
+#customer-review .container .break {
+  position: relative;
+  left: 47%;
+}
+#customer-review .container .reviews ::-webkit-scrollbar {
+  display: none;
+}
+#customer-review .container .reviews__cards {
+  height: 47vh;
+  width: 80vw;
+  display: flex;
+  align-items: flex-end;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  gap: 20px;
+}
+#customer-review .container .reviews__cards__first-card {
+  padding: 0 3%;
+  background-color: white;
+  height: 35vh;
+  width: 40vw;
+  scroll-snap-align: start;
+  flex: 0 0 50%;
+}
+#customer-review .container .reviews__cards__first-card__photo {
+  width: 100px;
+  height: 100px;
+  background-color: #eb4d4b;
+  border-radius: 50%;
+  position: relative;
+  bottom: 55px;
+}
+#customer-review .container .reviews__cards__first-card__name-position {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+#customer-review .container .reviews__cards__first-card__name-position .name {
+  font-weight: 500;
+  font-size: 25px;
+}
+#customer-review .container .reviews__cards__first-card__name-position .position {
+  color: #eb4d4b;
+}
+#customer-review .container .buttons {
+  display: flex;
+  width: 54.7%;
+  justify-content: end;
+}
+#customer-review .container .buttons .previousBtn, #customer-review .container .buttons .nextBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eb4d4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.7s;
+}
+#customer-review .container .buttons .previousBtn:hover {
+  background-color: black;
+  transform: scale(0.9);
+}
+#customer-review .container .buttons .nextBtn:hover {
+  background-color: black;
+  transform: scale(0.9);
+}
+
+#fabulous-products {
+  padding: 4% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#fabulous-products .subtitle {
+  letter-spacing: 10px;
+}
+#fabulous-products .subtitle h5 {
+  font-size: 18px;
+  color: #eb4d4b;
+}
+#fabulous-products .title h2 {
+  font-size: 47px;
+}
+#fabulous-products .parts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#fabulous-products .parts__featured, #fabulous-products .parts__best-sellers, #fabulous-products .parts__new-arrivals {
+  transition: 0.7s;
+}
+#fabulous-products .parts__featured:hover {
+  background-color: #f3f2f2;
+}
+#fabulous-products .parts__best-sellers:hover {
+  background-color: #f3f2f2;
+}
+#fabulous-products .parts__new-arrivals:hover {
+  background-color: #f3f2f2;
+}
+#fabulous-products .container {
+  padding: 3% 0;
+}
+#fabulous-products .container .apple-cinema-card-inside {
+  background-color: red;
+  height: 470px;
+}
+@-webkit-keyframes headerAnimation {
+  from {
+    height: 0;
+  }
+  to {
+    height: 74px;
+  }
+}
+@keyframes headerAnimation {
+  from {
+    height: 0;
+  }
+  to {
+    height: 74px;
+  }
+}
+@-webkit-keyframes mouseEnter {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes mouseEnter {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes mouseLeave {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(-1deg);
+  }
+}
+@keyframes mouseLeave {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(-1deg);
+  }
 }/*# sourceMappingURL=main.css.map */
