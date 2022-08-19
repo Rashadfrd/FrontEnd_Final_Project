@@ -1,0 +1,537 @@
+main {
+  display: flex;
+  background-color: white;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  -webkit-animation-name: headerAnimationn;
+          animation-name: headerAnimationn;
+  z-index: 999;
+}
+header .container {
+  padding: 1% 0 0.6% 0;
+}
+header .container .row {
+  justify-content: flex-end;
+}
+header .container .row__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .container .row__nav__links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+header .container .row__nav__links ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+header .container .row__nav__links ul li {
+  margin: 0 13px 0 13px;
+}
+header .container .row__nav__links ul a {
+  text-decoration: none;
+  color: black;
+}
+header .container .row__other-features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+#collection {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#collection .image {
+  width: 100%;
+  height: 150px;
+  background-color: aqua;
+  z-index: -1;
+  position: fixed;
+  background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/catalog/breadcrumb.png);
+  background-position: center;
+  background-position-y: -80px;
+}
+#collection ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#collection ul li a {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+}
+#collection ul li:hover a {
+  color: #eb4d4b;
+}
+
+aside {
+  padding-left: 7%;
+  padding-bottom: 5%;
+  margin-top: 30px;
+  width: 25%;
+}
+aside #categories {
+  border: 1px solid gainsboro;
+}
+aside #categories .title {
+  padding: 4%;
+  background-color: #f2f6f9;
+}
+aside #categories ul {
+  padding: 1% 4%;
+}
+aside #categories ul li {
+  margin-bottom: 9px;
+}
+aside #categories ul li a {
+  text-decoration: none;
+  color: black;
+}
+aside #refine-search {
+  margin-top: 30px;
+  border: 1px solid gainsboro;
+}
+aside #refine-search .title {
+  padding: 4%;
+  background-color: #f2f6f9;
+}
+aside #refine-search .form {
+  padding: 4%;
+}
+aside #refine-search button {
+  border-radius: 0;
+  transition: 0.7s;
+  border: none;
+  padding: 5%;
+}
+aside #refine-search button:hover {
+  background-color: #eb4d4b;
+}
+aside #best-sellers {
+  margin-top: 30px;
+  border: 1px solid gainsboro;
+}
+aside #best-sellers .title {
+  padding: 4%;
+  background-color: #f2f6f9;
+}
+aside #best-sellers .products {
+  padding: 3%;
+}
+aside #best-sellers .products .item {
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+}
+aside #best-sellers .products .item .name-price {
+  padding: 4%;
+}
+aside #best-sellers .products .item .name-price .price {
+  color: #eb4d4b;
+}
+aside #image {
+  margin-top: 30px;
+  position: relative;
+}
+aside #image .box {
+  display: none;
+  width: 230px;
+  height: 310px;
+  background-color: rgba(201, 198, 198, 0.3);
+  position: absolute;
+  left: 7%;
+  top: 6%;
+}
+
+#contact-subscribe-collections {
+  background-color: #f2f6f9;
+  padding-bottom: 5%;
+}
+#contact-subscribe-collections .container {
+  padding: 3% 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#contact-subscribe-collections .container .contact__form {
+  padding: 2%;
+  border: 1px solid gainsboro;
+}
+#contact-subscribe-collections .container .contact__form .titles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#contact-subscribe-collections .container .contact__form .titles .subtitle {
+  letter-spacing: 10px;
+}
+#contact-subscribe-collections .container .contact__form .titles .subtitle h5 {
+  font-size: 17px;
+  color: #eb4d4b;
+}
+#contact-subscribe-collections .container .contact__form .titles .title h2 {
+  font-size: 44px;
+}
+#contact-subscribe-collections .container .contact__form form .name, #contact-subscribe-collections .container .contact__form form .email {
+  border-radius: 10px;
+  width: 220px;
+  height: 40px;
+  padding: 0 2%;
+  border: none;
+}
+#contact-subscribe-collections .container .contact__form form .textarea {
+  border-radius: 10px;
+  padding: 0 0 0 2%;
+  border: none;
+}
+#contact-subscribe-collections .container .contact__form form .sendmessagebtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#contact-subscribe-collections .container .contact__form form .sendmessagebtn button {
+  border-radius: 30px;
+  height: 52px;
+  width: 140px;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside {
+  padding: 8% 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid gainsboro;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .subtitle {
+  letter-spacing: 10px;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .subtitle h5 {
+  font-size: 17px;
+  color: #eb4d4b;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .title h2 {
+  font-size: 44px;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .icon {
+  font-size: 60px;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .info p {
+  color: #6d6a6a;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside form {
+  position: relative;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside form .email {
+  width: 450px;
+  border: none;
+  border-radius: 20px;
+  padding-left: 2%;
+  height: 45px;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside form .subscribebtn {
+  border-radius: 20px;
+  height: 45px;
+  width: 120px;
+  position: absolute;
+  bottom: 2%;
+  right: 0;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .icons {
+  width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .icons .icn {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  transition: 0.7s;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .icons .icn:hover {
+  background-color: #eb4d4b;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .icons .fb {
+  background-color: #3b5999;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .icons .twitter {
+  background-color: #00aced;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .icons .youtube, #contact-subscribe-collections .container .subscribe-newsletter__inside .icons .pinterest {
+  background-color: #d12121;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .icons .google {
+  background-color: #dc473b;
+}
+#contact-subscribe-collections .container .subscribe-newsletter__inside .icons .instagram {
+  background-color: #cc2366;
+}
+#contact-subscribe-collections .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#contact-subscribe-collections .links ul {
+  display: flex;
+}
+#contact-subscribe-collections .links ul li span {
+  color: #6d6a6a;
+  margin: 0 7px 0 5px;
+  font-weight: 100;
+}
+
+footer {
+  background-color: #1e1e1e;
+}
+footer .container {
+  height: 58px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container .title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .container .title span a {
+  font-weight: 500;
+}
+footer .container .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-products-collection {
+  padding-top: 2%;
+  padding-bottom: 5%;
+  width: 60%;
+  position: relative;
+}
+#main-products-collection .preheader {
+  padding: 2%;
+  background-color: #f7f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#main-products-collection .preheader .button-compare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-products-collection .main-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-products-collection .main-products .cards {
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 10px;
+  margin-bottom: 15%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+#main-products-collection .main-products .cards .components {
+  text-align: center;
+}
+#main-products-collection .main-products .cards .components .cards-price {
+  color: #eb4d4b;
+}
+#main-products-collection .main-products .cards .button-group {
+  position: absolute;
+  top: 7%;
+  right: 5%;
+  transition: 0.7s;
+  transform: translate(66px);
+}
+#main-products-collection .main-products .cards .button-group__compare, #main-products-collection .main-products .cards .button-group__wish-list, #main-products-collection .main-products .cards .button-group__quick-view {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  -moz-columns: black;
+       columns: black;
+  transition: 0.7s;
+}
+#main-products-collection .main-products .cards .button-group__compare:hover {
+  color: white;
+  background-color: #eb4d4b;
+}
+#main-products-collection .main-products .cards .button-group__wish-list:hover {
+  color: white;
+  background-color: #eb4d4b;
+}
+#main-products-collection .main-products .cards .button-group__quick-view:hover {
+  color: white;
+  background-color: #eb4d4b;
+}
+#main-products-collection .main-products .cards .addbtn {
+  position: absolute;
+  bottom: 2%;
+  transition: 0.7s;
+  transform: translateY(52px);
+}
+#main-products-collection .cards:hover .button-group {
+  transform: translate(0px);
+}
+#main-products-collection .cards:hover .addbtn {
+  transform: translateY(0px);
+}
+#main-products-collection .pages {
+  background-color: #f2f6f9;
+  padding: 2% 18px;
+  position: absolute;
+  width: 100%;
+  top: 22%;
+}
+
+#register-returning {
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-bottom: 5%;
+  width: 63%;
+  display: flex;
+  justify-content: space-around;
+}
+#register-returning .register {
+  border: 1px solid rgb(220, 218, 218);
+  border-radius: 8px;
+  height: 250px;
+  padding: 2%;
+}
+#register-returning .register__title h5 {
+  font-weight: bold;
+}
+#register-returning .register__subtitle h5 {
+  font-size: 15px;
+  font-weight: normal;
+}
+#register-returning .register__btn button {
+  border: none;
+  transition: 0.5s;
+  border-radius: 0;
+}
+#register-returning .register__btn button:hover {
+  background-color: #eb4d4b;
+}
+#register-returning .returning {
+  border: 1px solid rgb(220, 218, 218);
+  border-radius: 8px;
+  height: 330px;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+}
+#register-returning .returning__subtitle h5 {
+  font-size: 15px;
+  font-weight: normal;
+}
+#register-returning .returning__form input {
+  width: 100%;
+  border: 1px solid gainsboro;
+}
+#register-returning .returning__form ::-webkit-input-placeholder {
+  font-size: 13px;
+}
+#register-returning .returning__form__link {
+  transform: 0.5s;
+}
+#register-returning .returning__form__link:hover {
+  color: #eb4d4b !important;
+}
+#register-returning .returning__btn button {
+  border: none;
+  transition: 0.5s;
+  border-radius: 0;
+}
+#register-returning .returning__btn button:hover {
+  background-color: #eb4d4b;
+}
+
+#registration {
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-bottom: 5%;
+  width: 63%;
+}
+#registration .pretitle {
+  padding-top: 1%;
+  background-color: #fcf8e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#registration .form .label {
+  margin: 12px 0;
+}
+#registration .form .label i {
+  font-size: 10px;
+  margin-right: 5px;
+  color: #eb4d4b;
+}
+#registration .form .input {
+  width: 82.8%;
+  height: 30px;
+  border: 1px solid gainsboro;
+}
+#registration .form__privacy {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@-webkit-keyframes headerAnimationn {
+  from {
+    height: 0;
+  }
+  to {
+    height: 74px;
+  }
+}
+
+@keyframes headerAnimationn {
+  from {
+    height: 0;
+  }
+  to {
+    height: 74px;
+  }
+}/*# sourceMappingURL=collection.css.map */
