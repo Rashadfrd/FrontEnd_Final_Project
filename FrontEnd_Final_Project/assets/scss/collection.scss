@@ -714,6 +714,8 @@ footer{
                 position: sticky;
                 top: 10%;
                 .share-review{
+                    padding: 3% 0;
+                    border-top: 1px solid gainsboro;
                     .like{
                         height: 20px;
                         font-size: 11px;
@@ -722,9 +724,151 @@ footer{
                         border: none;
                         color: white;
                     }
+                    .tweet{
+                        height: 20px;
+                        font-size: 11px;
+                        background-color: #00aced;
+                        border-radius: 3px;
+                        border: none;
+                        color: white;
+                        border-top-left-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                        padding-left: 2%;
+                    }
+                    select{
+                        position: relative;
+                        right: 7px;
+                        height: 20px;
+                        font-size: 11px;
+                        background-color: #fe6d4c;
+                        border: none;
+                        outline: 0;
+                        color: white;
+                        option{
+                            border: none;
+                            background-color: white;
+                            color: black;
+                        }
+                    }
+                    .review-part{
+                        a{
+                            text-decoration: none;
+                            color: rgb(104, 103, 103);
+                        }
+                    }
+                }
+
+                .addtocard{
+                    border-top: 1px solid gainsboro;
+                    padding: 3% 0;
+                    input{
+                        height: 45px;
+                    }
+                }
+
+                .item-info{
+                    padding: 3% 0;
+                    border-top: 1px solid gainsboro;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    .cards{
+                        border: 1px solid gainsboro;
+                        padding: 1%;
+                        width: 45%;
+                        .title{
+                            text-align: center;
+                            background-color: #f2f6f9;
+                        }
+                        .desc{
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }
+    }
+}
+
+#other-products{
+    background-color: white;
+    padding: 3% 6%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .subtitle{
+        letter-spacing: 10px;
+        h5{
+            font-size: 18px;
+            color: #eb4d4b;
+        }
+    }
+    .title{
+        h2{
+            font-size: 47px;
+        }
+    }
+    .cards{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        margin: 10px;
+        margin-bottom: 15%;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        .components{
+            text-align: center;
+            .cards-price{
+                color: #eb4d4b;
+            }
+        }
+        .button-group{
+            position: absolute;
+            top: 10%;
+            right: 5%;
+            transition: .7s;
+            transform: translate(66px);
+            &__compare,&__wish-list,&__quick-view{
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                columns: black;
+                transition: .7s;
+            }
+            &__compare:hover{
+                color: white;
+                background-color: #eb4d4b;
+            }
+            &__wish-list:hover{
+                color: white;
+                background-color: #eb4d4b;
+            }
+            &__quick-view:hover{
+                color: white;
+                background-color: #eb4d4b;
+            }
+        }
+        .addbtn{
+            position: absolute;
+            bottom: 2%;
+            transition: .7s;
+            transform: translateY(52px);
+        }
+    }
+    .cards:hover .button-group{
+        transform: translate(0px);
+    }
+    .cards:hover .addbtn{
+        transform: translateY(-20px);
     }
 }
 

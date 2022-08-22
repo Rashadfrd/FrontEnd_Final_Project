@@ -666,6 +666,10 @@ footer .container .cards {
   position: sticky;
   top: 10%;
 }
+.main-product #main-item-info-add .info-add .main-process .share-review {
+  padding: 3% 0;
+  border-top: 1px solid gainsboro;
+}
 .main-product #main-item-info-add .info-add .main-process .share-review .like {
   height: 20px;
   font-size: 11px;
@@ -673,6 +677,143 @@ footer .container .cards {
   border-radius: 3px;
   border: none;
   color: white;
+}
+.main-product #main-item-info-add .info-add .main-process .share-review .tweet {
+  height: 20px;
+  font-size: 11px;
+  background-color: #00aced;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 2%;
+}
+.main-product #main-item-info-add .info-add .main-process .share-review select {
+  position: relative;
+  right: 7px;
+  height: 20px;
+  font-size: 11px;
+  background-color: #fe6d4c;
+  border: none;
+  outline: 0;
+  color: white;
+}
+.main-product #main-item-info-add .info-add .main-process .share-review select option {
+  border: none;
+  background-color: white;
+  color: black;
+}
+.main-product #main-item-info-add .info-add .main-process .share-review .review-part a {
+  text-decoration: none;
+  color: rgb(104, 103, 103);
+}
+.main-product #main-item-info-add .info-add .main-process .addtocard {
+  border-top: 1px solid gainsboro;
+  padding: 3% 0;
+}
+.main-product #main-item-info-add .info-add .main-process .addtocard input {
+  height: 45px;
+}
+.main-product #main-item-info-add .info-add .main-process .item-info {
+  padding: 3% 0;
+  border-top: 1px solid gainsboro;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.main-product #main-item-info-add .info-add .main-process .item-info .cards {
+  border: 1px solid gainsboro;
+  padding: 1%;
+  width: 45%;
+}
+.main-product #main-item-info-add .info-add .main-process .item-info .cards .title {
+  text-align: center;
+  background-color: #f2f6f9;
+}
+.main-product #main-item-info-add .info-add .main-process .item-info .cards .desc {
+  text-align: center;
+}
+
+#other-products {
+  background-color: white;
+  padding: 3% 6%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#other-products .subtitle {
+  letter-spacing: 10px;
+}
+#other-products .subtitle h5 {
+  font-size: 18px;
+  color: #eb4d4b;
+}
+#other-products .title h2 {
+  font-size: 47px;
+}
+#other-products .cards {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 10px;
+  margin-bottom: 15%;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+#other-products .cards .components {
+  text-align: center;
+}
+#other-products .cards .components .cards-price {
+  color: #eb4d4b;
+}
+#other-products .cards .button-group {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  transition: 0.7s;
+  transform: translate(66px);
+}
+#other-products .cards .button-group__compare, #other-products .cards .button-group__wish-list, #other-products .cards .button-group__quick-view {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  -moz-columns: black;
+       columns: black;
+  transition: 0.7s;
+}
+#other-products .cards .button-group__compare:hover {
+  color: white;
+  background-color: #eb4d4b;
+}
+#other-products .cards .button-group__wish-list:hover {
+  color: white;
+  background-color: #eb4d4b;
+}
+#other-products .cards .button-group__quick-view:hover {
+  color: white;
+  background-color: #eb4d4b;
+}
+#other-products .cards .addbtn {
+  position: absolute;
+  bottom: 2%;
+  transition: 0.7s;
+  transform: translateY(52px);
+}
+#other-products .cards:hover .button-group {
+  transform: translate(0px);
+}
+#other-products .cards:hover .addbtn {
+  transform: translateY(-20px);
 }
 
 @-webkit-keyframes headerAnimationn {
