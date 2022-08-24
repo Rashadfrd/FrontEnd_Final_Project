@@ -579,8 +579,35 @@ footer{
             }
             .owl-carousel.owl-theme{
                 width: 99%;
+                position: relative;
                 .item{
                     background-color: white;
+                }
+                .owl-prev,.owl-next{
+                    background-color: #eb4d4b;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    color: white;
+                    transition: .7s;
+                    position: absolute;
+                }
+                .owl-prev{
+                    top: 40%;
+                    left: 0;
+                }
+                .owl-next{
+                    right: 0;
+                    top: 40%;
+                }
+                .owl-prev:hover{
+                    background-color: black;
+                }
+                .owl-next:hover{
+                    background-color: black;
+                }
+                .owl-dots{
+                    display: none;
                 }
             }
         
@@ -872,6 +899,23 @@ footer{
             transition: .7s;
             transform: translateY(52px);
         }
+    }
+    .owl-prev,.owl-next{
+        background-color: #eb4d4b;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        color: white;
+        transition: .7s;
+    }
+    .owl-prev:hover{
+        background-color: black;
+    }
+    .owl-next:hover{
+        background-color: black;
+    }
+    .owl-dots{
+        display: none;
     }
     .cards:hover .button-group{
         transform: translate(0px);
