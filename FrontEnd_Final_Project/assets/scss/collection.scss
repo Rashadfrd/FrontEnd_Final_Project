@@ -1,3 +1,8 @@
+@mixin anchor($color) {
+    text-decoration: none;
+    color: $color;
+}
+
 .main-collection{
     display: flex;
     background-color: white;
@@ -12,14 +17,13 @@
     display: flex;
     background-color: white;
 }
-header{
-    position: sticky;
-    top: 0;
-    background-color: white;
-    animation-name: headerAnimationn;
+#header{
     z-index: 999;
-    // animation-duration: .7s;
-    .container{
+    width: 100%;
+    background-color: white;
+    transition: .8s;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        .container{
         padding: 1% 0 0.6% 0;
         .row{
             justify-content: flex-end;
@@ -39,10 +43,61 @@ header{
                         margin: 0;
                         li{
                             margin: 0 13px 0 13px;
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            a{
+                                color: black;
+                            }
+                        }
+                        .drone{
+                            position: relative;
+                            .drone-dropdown{
+                                cursor: pointer;
+                                padding: 8px 0 8px 0;
+                                background-color: white;
+                                width: 550px;
+                                color: black;
+                                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                                position: relative;
+                                height: 130px;
+                                display: none;
+                                position: absolute;
+                                top: 100%;
+                                left: 0%;
+                                .inside{
+                                    display: flex;
+                                    justify-content: space-around;
+                                }
+                            }
+                        }
+                        .accesories{
+                            position: relative;
+                            .accesories-dropdown{
+                                cursor: pointer;
+                                padding: 8px 0 8px 0;
+                                background-color: white;
+                                width: 350px;
+                                color: black;
+                                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                                position: relative;
+                                height: 130px;
+                                position: absolute;
+                                top: 100%;
+                                left: 0%;
+                                display: none;
+                                .inside{
+                                    display: flex;
+                                    justify-content: space-around;
+                                }
+                            }
+                        }
+                        li:hover a{
+                            color: black
                         }
                         a{
-                            text-decoration: none;
-                            color: black;
+                            @include anchor(white);
+                            transition: .3s;
                         }
                     }
                 }
@@ -53,6 +108,52 @@ header{
                 justify-content: center;
                 align-items: center;
                 font-size: 22px;
+                &__search{
+                    .search-dropdown{
+                        position: absolute;
+                        right: 12.9%;
+                        display: none;
+                        input{
+                            font-size: 15px;
+                            outline: 0;
+                            border: none;
+                            width: 20vw;
+                            height: 38px;
+                            padding: 0 3% ;
+                        }
+                        i{
+                            position: relative;
+                            right: 34px;
+                            color: black;
+                        }
+                        ::-webkit-input-placeholder{
+                            color: rgb(182, 181, 181);
+                            font-size: 18px;
+                        }
+                    }
+                }
+                &__user{
+                    .user-dropdown{
+                        cursor: pointer;
+                        a{
+                            text-decoration: none;
+                            color: black;
+                        }
+                        padding: 20px;
+                        position: absolute;
+                        right: 12.9%;
+                        background-color: white;
+                        color: black;
+                        font-size: 14px;
+                        display: none;
+                    }
+                }
+                i{
+                    transition: .4s;
+                }
+                i:hover{
+                    color: black;
+                }
             }
         }
     }
@@ -65,13 +166,13 @@ header{
     align-items: center;
     .image{
         width: 100%;
-        height: 150px;
+        height: 350px;
         background-color: aqua;
         z-index: -1;
         position: fixed;
         background-image: url(https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/catalog/breadcrumb.png);
         background-position: center;
-        background-position-y: -80px;
+        background-position-y: 10px;
     }
     ul{
         display: flex;
@@ -930,7 +1031,7 @@ footer{
     body{
         overflow-x: hidden;
     }
-    #header{
+    header{
         width: 100%;
         overflow-x: hidden;
     }
@@ -1154,10 +1255,6 @@ footer{
             ul{
                 flex-wrap: wrap;
                 justify-content: center;
-                li{
-                    span{
-                    }
-                }
             }
         }
     }

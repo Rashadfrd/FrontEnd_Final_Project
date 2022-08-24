@@ -104,14 +104,23 @@ branding.addEventListener("mouseleave",function (e) {
 })
 
 function myFunction() {
-    if (document.body.scrollTop > 53 || document.documentElement.scrollTop > 53) {
+  if (document.body.scrollTop < 60 || document.documentElement.scrollTop > 60) {
+    $("#header").css("height","0");    
+  }
+    if (document.body.scrollTop > 65 || document.documentElement.scrollTop > 65) {
         // $("#header").show(500);
-        $("#header").show();
-        // $("#header-2").hide();
+        $("#header").css("position","sticky");
+        $("#header").css("top","0");
+        $("#header").css("height","80px");    
+        $("#header").css("background-color","white" );
+        $(".links").css("color","black");
+
       } 
       else{
-        // $("#header-2").show(0);
-        $("#header").hide();
+        $("#header").css("background-color","transparent" );
+        $("#header").css("position","absolute");
+        $("#header").css("top","0");
+        $(".links").css("color","white")
       }
 }
 
