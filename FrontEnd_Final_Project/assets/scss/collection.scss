@@ -17,6 +17,154 @@
     display: flex;
     background-color: white;
 }
+
+#menu-slider{
+    .slider{
+        padding:1% 0;
+        height: 120vh;
+        width: 0;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        transition: .5s;
+        &__close{
+            width: 100%;
+            height: 30px;
+            padding: 0 4%;
+            display: flex;
+            justify-content: end;
+            border-bottom: 1px solid gainsboro;
+            i{
+                cursor: pointer;
+            }
+        }
+        &__links{
+            width: 100%;
+            padding: 2% 0;
+            $midnight: #2c3e50;
+            $clouds: #ecf0f1;
+            // General
+            h1 {
+  margin: 0;
+  line-height: 2;
+  text-align: center;
+            }
+            h2 {
+  margin: 0 0 .5em;
+  font-weight: normal;
+            }
+            input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+            }
+            // Layout
+            .row {
+  display:flex;
+  .col {
+    flex:1;
+    &:last-child {
+      margin-left: 1em;
+    }
+  }
+            }
+            /* Accordion styles */
+            .tabs {
+  overflow: hidden;
+            }
+            .tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  &-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: white;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    /* Icon */
+    &:hover {
+      background: darken(white, 10%);
+    }
+    &::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+    }
+  }
+  &-content {
+    max-height: 0;
+    padding: 0 1em;
+    color: black;
+    background: white;
+    transition: all .35s;
+  }
+  &-close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    background: white;
+    cursor: pointer;
+    &:hover {
+      background: darken(white, 10%);
+    }
+  }
+            }
+            
+            // :checked
+            input:checked {
+  + .tab-label {
+    background: darken(white, 10%);
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+  }
+            }
+
+            .links-ul{
+                display: none;
+                ul{
+                    li{
+                        padding: 3% 8%;
+                        a{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+     }
+ }
+}
+
+.scroller{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #eb4d4b;
+    z-index: 9999   ;
+    position: fixed;
+    right: 2%;
+    bottom: 3%;
+    text-align: center;
+    padding-top: 10px;
+    opacity: 0;
+    transition: .5s;
+}
+.scroller:hover{
+    background-color: black;
+}
+
 #header{
     z-index: 999;
     width: 100%;
@@ -27,6 +175,12 @@
         padding: 1% 0 0.6% 0;
         .row{
             justify-content: flex-end;
+            &__menu{
+                display: none;
+                i{
+                    cursor: pointer;
+                }
+            }
             &__nav{
                 display: flex;
                 justify-content: center;
@@ -723,6 +877,8 @@ footer{
                 }
                 // Layout
                 .row {
+                    width: 700px;
+                    height: 100%;
                   display:flex;
                   .col {
                     flex:1;
@@ -1031,9 +1187,26 @@ footer{
     body{
         overflow-x: hidden;
     }
-    header{
-        width: 100%;
-        overflow-x: hidden;
+    #header{
+        padding-top: 2%;
+        .container{
+            .row{
+                justify-content: space-between;
+                &__nav{
+                    display: none;
+                }
+                &__desktop-logo{
+                    width:32%;
+                }
+                &__menu{
+                    display: block;
+                    width: 20%;
+                }
+                &__other-features{
+                    width: 20%;
+                }
+            }
+        }
     }
     #contact-subscribe-collections{
         .container{
@@ -1093,6 +1266,9 @@ footer{
                     }
                 }
                 .slider{
+                    .row{
+                        width: 400px;
+                    }
                     .check {
                         position: absolute;
                         opacity: 0;
@@ -1107,7 +1283,7 @@ footer{
                         }
                         ~ .tab-content {
                           overflow-x: scroll;
-                          max-height: 30vh;
+                          max-height: 25vh;
                           padding: 1em;
                         }
                       }
@@ -1193,9 +1369,36 @@ footer{
     body{
         overflow-x: hidden;
     }
-    header{
+    #header{
+        padding-top: 6%;
         width: 100%;
-        overflow-x: hidden;
+        .container{
+            .row{
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                justify-content: space-evenly;
+                &__nav{
+                    display: none;
+                }
+                &__desktop-logo{
+                    width:42%;
+                    a{
+                        img{
+                            width: 180px;
+                        }
+                    }
+                }
+                &__menu{
+                    display: block;
+                    width: 10%;
+                }
+                &__other-features{
+                    width: 40%;
+                    font-size: 15px;
+                }
+            }
+        }
     }
     footer{
         height: 85px;
@@ -1295,6 +1498,9 @@ footer{
                     }
                 }
                 .slider{
+                    .row{
+                        width: 400px;
+                    }
                     .check {
                         position: absolute;
                         opacity: 0;

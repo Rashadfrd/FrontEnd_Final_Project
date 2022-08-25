@@ -12,9 +12,53 @@
     <title>Your Store</title>
 </head>
 <body>
+    <section id="menu-slider">
+        <div class="slider">
+            <div class="slider__close">
+                <i class="fa-solid fa-x menu-close"></i>
+            </div>
+            <div class="slider__links">
+                <div class="row slider-row">
+                     <div class="col">
+                       <div class="tabs">
+                         <div class="tab">
+                           <input type="checkbox" id="chck1">
+                           <label class="tab-label" for="chck1">Drone</label>
+                           <div class="tab-content">
+                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
+                           </div>
+                         </div>
+                         <div class="tab">
+                           <input type="checkbox" id="chck2">
+                           <label class="tab-label" for="chck2">Accesories</label>
+                           <div class="tab-content">
+                             Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                 </div>
+                 <div class="links-ul">
+                    <ul class="list-unstyled">
+                        <li><a href="" class="text-decoration-none text-dark">Collection</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Components</a></li>
+                        <li><a href="" class="text-decoration-none text-dark">Outfits</a></li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="scroller">
+        <i class="fa-solid fa-chevron-up fs-6 text-light"></i>
+    </div>
+
     <header id="header">
         <div class="container">
             <div class="row">
+                <div class="row__menu fs-2">
+                    <i class="fa-solid fa-bars menu-open"></i>
+                </div>
                 <div class="row__desktop-logo col-lg-3">
                     <div class="row__desktop-logo-logo">
                         <a href="file:///H:/Rashad/Code/HTML/FrontEnd_Final_Project/home.html"><img src="https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/catalog/Logo.png" alt="Fabulous logo"></a>
@@ -70,7 +114,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="" class="links" target="_blank">Collection</a></li>
+                            <li><a href="./collection.html" class="links" target="_blank">Collection</a></li>
                             <li><a href="" class="links" target="_blank">Components</a></li>
                             <li><a href="" class="links" target="_blank">Outfits</a></li>
                         </ul>
@@ -88,8 +132,8 @@
                     <div class="row__other-features__user m-2">
                         <i class="fa-regular fa-user"></i>
                         <div class="user-dropdown">
-                            <span><a href="" class="text-secondary" target="_blank">Register</a></span><br>
-                            <span><a href="" class="text-secondary" target="_blank">Login</a></span><br>
+                            <span><a href="./register.html" class="text-secondary" target="_blank">Register</a></span><br>
+                            <span><a href="./login.html" class="text-secondary" target="_blank">Login</a></span><br>
                             <span><a href="" class="text-secondary" target="_blank">Wish List (0)</a></span>
                             <hr>
                             <span>Language :</span><br>
@@ -105,6 +149,7 @@
 
                     <div class="row__other-features__basket m-2">
                         <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="basket-counter">0</span>
                     </div>
                 </div>
             </div>
@@ -326,11 +371,11 @@
             <div class="owl-two owl-carousel owl-theme">
                 <div class="item card-wrapper">      
                   <div class="cards">
-                    <a href="" target="_blank"><img src="https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/productsimage/17-370x370.jpg" alt=""></a>
+                    <a href="./product.html" target="_blank"><img src="assets/images/Drone-product.jpg" alt=""></a>
 
                     <div class="components pt-2">
                         <span class="cards-brandname">Apple Cinema 30"</span><br>
-                        <span style="color: #eb4d4b;">$</span> <span class="cards-price">122.00</span>
+                        <span style="color: #eb4d4b;">$</span> <span class="cards-price">555.00</span>
                     </div>
 
                     <div class="button-group">
@@ -346,16 +391,16 @@
                     </div>
 
                     <div class="addbtn">
-                        <button class="addbutton btn btn-danger">ADD TO CARD</button>
+                        <button data-id="1" class="addbutton btn btn-danger">ADD TO CARD</button>
                     </div>
                   </div>
 
                     <div class="cards">
-                        <a href="" target="_blank"><img src="https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/productsimage/17-370x370.jpg" alt=""></a>
+                        <a href="./product.html" target="_blank"><img src="assets/images/Drone-product.jpg" alt=""></a>
 
                         <div class="components pt-2">
                             <span class="cards-brandname">Canon EOS 5D</span><br>
-                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">122.00</span>
+                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">103.00</span>
                         </div>
 
                         <div class="button-group">
@@ -371,18 +416,18 @@
                         </div>
     
                         <div class="addbtn">
-                            <button class="addbutton btn btn-danger">ADD TO CARD</button>
+                            <button data-id="4" class="addbutton btn btn-danger">ADD TO CARD</button>
                         </div>
                     </div>      
                   </div>
               
                   <div class="item card-wrapper">        
                     <div class="cards">
-                        <a href="" target="_blank"><img src="https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/productsimage/17-370x370.jpg" alt=""></a>
+                        <a href="./product.html" target="_blank"><img src="assets/images/Drone-product.jpg" alt=""></a>
 
                         <div class="components pt-2">
                             <span class="cards-brandname">HTC Touch HD</span><br>
-                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">122.00</span>
+                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">422.00</span>
                         </div>
 
                         <div class="button-group">
@@ -398,15 +443,15 @@
                         </div>
     
                         <div class="addbtn">
-                            <button class="addbutton btn btn-danger">ADD TO CARD</button>
+                            <button data-id="2" class="addbutton btn btn-danger">ADD TO CARD</button>
                         </div>
                     </div>
                       <div class="cards">
-                        <a href="" target="_blank"><img src="https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/productsimage/17-370x370.jpg" alt=""></a>
+                        <a href="./product.html" target="_blank"><img src="assets/images/Drone-product.jpg" alt=""></a>
 
                         <div class="components pt-2">
                             <span class="cards-brandname">IPod Nano</span><br>
-                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">122.00</span>
+                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">152.00</span>
                         </div>
 
                         <div class="button-group">
@@ -422,18 +467,18 @@
                         </div>
     
                         <div class="addbtn">
-                            <button class="addbutton btn btn-danger">ADD TO CARD</button>
+                            <button data-id="5" class="addbutton btn btn-danger">ADD TO CARD</button>
                         </div>
                       </div>      
                     </div>      
 
                   <div class="item card-wrapper">        
                     <div class="cards">
-                        <a href="" target="_blank"><img src="https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/productsimage/17-370x370.jpg" alt=""></a>
+                        <a href="./product.html" target="_blank"><img src="assets/images/Drone-product.jpg" alt=""></a>
 
                         <div class="components pt-2">
                             <span class="cards-brandname">IPod Shuffle</span><br>
-                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">122.00</span>
+                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">102.00</span>
                         </div>
 
                         <div class="button-group">
@@ -449,15 +494,15 @@
                         </div>
     
                         <div class="addbtn">
-                            <button class="addbutton btn btn-danger">ADD TO CARD</button>
+                            <button data-id="3" class="addbutton btn btn-danger">ADD TO CARD</button>
                         </div>
                     </div>
                       <div class="cards">
-                        <a href="" target="_blank"><img src="https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/productsimage/17-370x370.jpg" alt=""></a>
+                        <a href="./product.html" target="_blank"><img src="assets/images/Drone-product.jpg" alt=""></a>
 
                         <div class="components pt-2">
                             <span class="cards-brandname">HP LP3065</span><br>
-                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">122.00</span>
+                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">322.00</span>
                         </div>
 
                         <div class="button-group">
@@ -473,18 +518,18 @@
                         </div>
     
                         <div class="addbtn">
-                            <button class="addbutton btn btn-danger">ADD TO CARD</button>
+                            <button data-id="7" class="addbutton btn btn-danger">ADD TO CARD</button>
                         </div>
                       </div>      
                     </div>      
               
                   <div class="item card-wrapper">      
                     <div class="cards">
-                        <a href="" target="_blank"><img src="https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/productsimage/17-370x370.jpg" alt=""></a>
+                        <a href="./product.html" target="_blank"><img src="assets/images/Drone-product.jpg" alt=""></a>
 
                         <div class="components pt-2">
                             <span class="cards-brandname">IMac</span><br>
-                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">122.00</span>
+                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">162.00</span>
                         </div>
 
                         <div class="button-group">
@@ -500,15 +545,15 @@
                         </div>
     
                         <div class="addbtn">
-                            <button class="addbutton btn btn-danger">ADD TO CARD</button>
+                            <button data-id="4" class="addbutton btn btn-danger">ADD TO CARD</button>
                         </div>
                     </div>
                       <div class="cards">
-                        <a href="" target="_blank"><img src="https://demo.ishithemes.com/opencart/OPC100/OPC100L02/image/cache/catalog/productsimage/17-370x370.jpg" alt=""></a>
+                        <a href="./product.html" target="_blank"><img src="assets/images/Drone-product.jpg" alt=""></a>
 
                         <div class="components pt-2">
                             <span class="cards-brandname">IPod Classic</span><br>
-                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">122.00</span>
+                            <span style="color: #eb4d4b;">$</span> <span class="cards-price">222.00</span>
                         </div>
 
                         <div class="button-group">
@@ -524,7 +569,7 @@
                         </div>
     
                         <div class="addbtn">
-                            <button class="addbutton btn btn-danger">ADD TO CARD</button>
+                            <button data-id="8" class="addbutton btn btn-danger">ADD TO CARD</button>
                         </div>
                       </div>
                   </div>

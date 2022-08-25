@@ -23,12 +23,32 @@ function myFunction() {
           $("#header").css("top","0");
           $("#header").css("height","80px");    
           $("#header").css("background-color","white" );
+          $(".scroller").css("opacity","1");
         } 
         else{
           $("#header").css("position","static");
+          $(".scroller").css("opacity","0");
         }
   }
 
+
+  $('.menu-open').click(function () {
+    $('.slider').css("width","300px")
+    $('.links-ul').show(100);
+    $('.slider-row').show(100);
+  })
+  
+  
+  $('.menu-close').click(function () {
+    $('.slider').css("width","0px")
+    $('.links-ul').hide(100);
+    $('.slider-row').hide(100);
+  
+  })
+
+  $('.scroller').on("click",function(){
+    $(window).scrollTop(0);
+  });
 
 
 $('.drone').hover(function () {

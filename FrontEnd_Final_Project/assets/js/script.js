@@ -22,6 +22,53 @@ let butterflyImg = document.querySelector(".butterfly-img");
 let brandingImg = document.querySelector(".branding-img");
 let brandImg = document.querySelector(".brand-img");
 
+
+
+let result = localStorage.getItem("basket");
+let basket;
+
+if (!result) {
+  localStorage.setItem("basket",JSON.stringify([]));
+}
+
+
+buttonn.forEach((btn)=>{
+  btn.addEventListener("click",function () {
+
+    basket = JSON.parse(localStorage.getItem("basket")) || [];
+    let id = this.getAttribute("data-id");
+    let price = this.parentElement.parentElement.querySelector(".cards-price").innerText;
+    let name = this.parentElement.parentElement.querySelector(".cards-brandname").innerText;
+    let imgSrc = this.parentElement.parentElement.querySelector("img").src;
+    let imgDatas = imgSrc.split("/");
+    let img = imgDatas[imgDatas.length-1]
+
+    let existed = basket.find((value) => {
+      return value.id == id;
+    })
+    if (!existed) {
+      let item = {id, img, name, price, count: 1 };
+      basket.push(item);
+    } else {
+      existed.count++
+    }
+    localStorage.setItem("basket",JSON.stringify(basket));
+    GetCount();
+  });
+});
+GetCount();
+function GetCount() {
+  let basket = JSON.parse(localStorage.getItem("basket"));
+  let count = basket.reduce((count, value) =>{
+    return (count += value.count);
+  },0);
+  let basketCounter = document.querySelector(".basket-counter");
+  basketCounter.innerText = count;
+}
+
+
+
+
 delivery.addEventListener("mouseenter",function (e) {
   e.stopPropagation();
   deliveryImg.style.animationName = "mouseEnter";
@@ -114,6 +161,7 @@ function myFunction() {
         $("#header").css("height","80px");    
         $("#header").css("background-color","white" );
         $(".links").css("color","black");
+        $(".scroller").css("opacity","1");
 
       } 
       else{
@@ -121,9 +169,27 @@ function myFunction() {
         $("#header").css("position","absolute");
         $("#header").css("top","0");
         $(".links").css("color","white")
+        $(".scroller").css("opacity","0");
       }
 }
 
+$('.menu-open').click(function () {
+  $('.slider').css("width","300px")
+  $('.links-ul').show(100);
+  $('.slider-row').show(100);
+})
+
+
+$('.menu-close').click(function () {
+  $('.slider').css("width","0px")
+  $('.links-ul').hide(100);
+  $('.slider-row').hide(100);
+
+})
+
+$('.scroller').on("click",function(){
+  $(window).scrollTop(0);
+});
 
 $('.owl-one').owlCarousel({
   margin:10,
@@ -148,10 +214,12 @@ $('.owl-three').owlCarousel({
   responsiveClass:true,
   responsive:{
       0:{
-          items:1
+          items:1,
+          loop:true
       },
       600:{
-          items:1
+          items:1,
+          loop:true
       },
       1000:{
           items:1,
@@ -204,7 +272,7 @@ $('.row__other-features__user').click(function (e) {
 
 $('body').click(function () {
   $('.search-dropdown').slideUp(500);
-  $('.user-dropdown').slideUp(500)
+  $('.user-dropdown').slideUp(500);
 })
 
 
